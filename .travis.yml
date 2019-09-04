@@ -5,4 +5,4 @@ services:
 
 script:
   - docker build -t $TRAVIS_REPO_SLUG .
-  - bash docker-push.sh
+  # - bash docker-push.sh
