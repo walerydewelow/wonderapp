@@ -10,4 +10,10 @@ go:
   - 1.12.x
 
 script:
-  - docker build -t walerydewelow/wonderapp .
+  - docker build -t $TRAVIS_REPO_SLUG .
+
+deploy:
+  - provider: script
+  - script:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker push -t $TRAVIS_REPO_SLUG
