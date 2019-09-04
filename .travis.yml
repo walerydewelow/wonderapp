@@ -8,7 +8,6 @@ go:
 
 script:
   - docker build -t $TRAVIS_REPO_SLUG .
-  - echo $DOCKER_USERNAME
 
 deploy:
   - provider: script
