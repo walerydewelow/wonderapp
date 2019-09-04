@@ -1,10 +1,7 @@
-language: go
+language: generic
 
 services:
   - docker
-
-go:
-  - 1.12.x
 
 script:
   - docker build -t $TRAVIS_REPO_SLUG .
