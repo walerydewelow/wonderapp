@@ -7,4 +7,4 @@ FROM alpine:3
 
 COPY --from=build /go/bin/wonderapp /
 
-ENTRYPOINT [ "/go/bin/wonderapp" ]
+ENTRYPOINT [ "/wonderapp" ]
