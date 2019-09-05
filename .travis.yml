@@ -3,6 +3,10 @@ language: generic
 services:
   - docker
 
+before_script:
+  - go install github.com/golangci/golangci-lint/cmd/golangci-lint
+
 script:
+  - golangci-lint run --enable-all
   - docker build -t $TRAVIS_REPO_SLUG .
   # - bash docker-push.sh
