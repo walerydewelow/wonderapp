@@ -10,3 +10,7 @@ script:
   - golangci-lint run --enable-all
   - docker build -t $TRAVIS_REPO_SLUG .
   # - bash docker-push.sh
+
+deploy:
+  provider: script
+  script: echo OK
