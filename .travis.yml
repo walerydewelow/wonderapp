@@ -13,4 +13,4 @@ script:
 
 deploy:
   provider: script
-  script: echo OK
+  script: bash docker-push.sh
